@@ -19,9 +19,6 @@
 * aggregate the text entailment scores: compute the weighted average of them, where the weight is the relevance score. **Now it is possible to tell if the knowledge base confirms, is neutral or disproves the user statement.**
 * *empirical consideration: if in the first N passages (N<K),  there is strong evidence of entailment/contradiction (partial aggregate scores > 0.5), it is better not to consider (K-N) less relevant documents.*
 
-### Explain using a LLM
-* if there is entailment or contradiction, prompt `google/flan-t5-large`, asking why the relevant textual passages entail/contradict the user statement.
-
 ### Repository structure
 * [Rock_fact_checker.py](Rock_fact_checker.py) and [pages folder](./pages/): multi-page Streamlit web app
 * [app_utils folder](./app_utils/): python modules used in the web app
