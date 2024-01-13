@@ -1,9 +1,8 @@
-import streamlit as st
 import pandas as pd
 import plotly.graph_objects as go
 import plotly.io as pio
+import streamlit as st
 
-# this helps to preserve default plotly colors
 pio.templates.default = "plotly"
 
 entailment_html_messages = {
@@ -18,7 +17,7 @@ def build_sidebar():
     <h1 style='text-align: center'>Fact Checking 🎸 Rocks!</h1>
     <div style='text-align: center'>
     <i>Fact checking baseline combining dense retrieval and textual entailment</i>
-    <p><br/><a href='https://github.com/anakin87/fact-checking-rocks'>Github project</a> - Based on <a href='https://github.com/deepset-ai/haystack'>Haystack</a></p>
+    <p><br/><a href='https://github.com/NgoDangKhoauit/Rocks-checking'>Github project</a> - Based on <a href='https://github.com/deepset-ai/haystack'>Haystack</a></p>
     <p><small><a href='https://en.wikipedia.org/wiki/List_of_mainstream_rock_performers'>Data crawled from Wikipedia</a></small></p>
     </div>
     """
