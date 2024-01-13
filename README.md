@@ -6,7 +6,7 @@
   * preprocess the downloaded documents into chunks consisting of 2 sentences
   * chunks with less than 10 words are discarded, because not very informative
   * instantiate a [FAISS](https://github.com/facebookresearch/faiss) Document store and store the passages on it
-  * create embeddings for the passages, using a Sentence Transformer model and save them in FAISS. The retrieval task will involve [*asymmetric semantic search*](https://www.sbert.net/examples/applications/semantic-search/README.html#symmetric-vs-asymmetric-semantic-search) (statements to be verified are usually shorter than inherent passages), therefore I choose the model `msmarco-distilbert-base-tas-b`
+  * create embeddings for the passages, using a Sentence Transformer model and save them in FAISS. The retrieval task will involve [*asymmetric semantic search*](https://www.sbert.net/examples/applications/semantic-search/README.html#symmetric-vs-asymmetric-semantic-search)
   * save FAISS index.
 
 ### Search pipeline
