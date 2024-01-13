@@ -1,0 +1,10 @@
+# we now use the Haystack Docker image, so the following line is not needed anymore
+# farm-haystack[faiss,inference]==1.23.0
+
+haystack-entailment-checker
+plotly==5.14.1
+pydantic<2
+
+streamlit==1.19.0
+
+altair<5
