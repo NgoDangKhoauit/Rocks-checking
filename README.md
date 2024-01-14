@@ -28,7 +28,7 @@
 
  To install this project locally, follow these steps:
 * `git clone https://github.com/NgoDangKhoauit/Rocks-checking`
-* `cd fact-checking-rocks`
+* `cd Rocks-checking`
 * `pip install -r requirements.txt`
 
 To run the web app, simply type: `streamlit run Rock_fact_checker.py`
