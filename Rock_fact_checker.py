@@ -52,14 +52,12 @@ def main():
     if col2.button("Random statement"):
         reset_results()
         statement = random.choice(statements)
-        # Avoid picking the same statement twice (the change is not visible on the UI)
+        # Avoid picking the same statement twice
         while statement == st.session_state.statement:
             statement = random.choice(statements)
         st.session_state.statement = statement
         st.session_state.random_statement_requested = True
         # Re-runs the script setting the random statement as the textbox value
-        # Unfortunately necessary as the Random statement button is _below_ the textbox
-        # Adapted for Streamlit>=1.12.0
         if hasattr(st, "scriptrunner"):
             raise st.scriptrunner.script_runner.RerunException(
                 st.scriptrunner.script_requests.RerunData(widget_states=None)
@@ -100,7 +98,6 @@ def main():
         docs = st.session_state.results["documents"]
         agg_entailment_info = st.session_state.results["aggregate_entailment_info"]
 
-        # show different messages depending on entailment results
         max_key = max(agg_entailment_info, key=agg_entailment_info.get)
         message = entailment_html_messages[max_key]
         st.markdown(f"<br/><h4>{message}</h4>", unsafe_allow_html=True)
@@ -109,7 +106,6 @@ def main():
         col1, col2 = st.columns([2, 1])
         fig = create_ternary_plot(agg_entailment_info)
         with col1:
-            # theme=None helps to preserve default plotly colors
             st.plotly_chart(fig, use_container_width=True, theme=None)
         with col2:
             st.write(agg_entailment_info)
