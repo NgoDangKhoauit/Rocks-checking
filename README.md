@@ -27,7 +27,7 @@
 ### Installation
 
  To install this project locally, follow these steps:
-* `git clone https://github.com/anakin87/fact-checking-rocks`
+* `git clone https://github.com/NgoDangKhoauit/Rocks-checking`
 * `cd fact-checking-rocks`
 * `pip install -r requirements.txt`
 
